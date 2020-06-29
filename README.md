@@ -1,0 +1,2 @@
+# Home-Credit-Default-Risk-Recognition
+Created a binary classifier in Python to recognize the risk of housing loan default in imbalanced data. Used ETL processes to connect relational databases through feature engineering, and applied machine learning methods like logistic regression, random forest, and gradient boosting (Scikit-learn, XGBoost, LightGBM) for understanding client factors that cause loan default. The results were improved through hyperparameter tuning with K-fold cross-validation, grid/random search, and Bayesian optimization.
