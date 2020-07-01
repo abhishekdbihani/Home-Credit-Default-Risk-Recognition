@@ -27,13 +27,13 @@ The [problem and associated data](https://www.kaggle.com/c/home-credit-default-r
 <i> The [notebook](https://github.com/abhishekdbihani/Home-Credit-Default-Risk-Recognition/blob/master/Abhishek%20Capstone%20-%20Home%20Credit%20Risk%20v2.ipynb) provides a complete end-to-end machine learning workflow for building a binary classifier, and includes methods like automated feature engineering for connecting relational databases, comparison of different classifiers on imbalanced data, and hyperparameter tuning using Bayesian optimization. </i>
 
 <img src="https://github.com/abhishekdbihani/Home-Credit-Default-Risk-Recognition/blob/master/roc_auc_compare.PNG" align="middle" width="500" height="400" alt="ROC AUC comparison" >
-Figure 1- ROC AUC Comparison of Different Classifiers
+Figure 1- ROC Curve and AUC Comparison of Different Classifiers
 
 ---
 
 <b> Datasets and Inputs </b>
 
-The [dataset files](https://www.kaggle.com/c/home-credit-default-risk/data) are provided on the Kaggle website in the form of multiple CSV files and are free to download. The dataset files are described as per Figure 1.
+The [dataset files](https://www.kaggle.com/c/home-credit-default-risk/data) are provided on the Kaggle website in the form of multiple CSV files and are free to download. The dataset files are described as per Figure 2.
 
 ![image](https://storage.googleapis.com/kaggle-media/competitions/home-credit/home_credit.png)
  
