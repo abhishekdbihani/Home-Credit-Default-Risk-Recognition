@@ -14,13 +14,22 @@ An important fraction of the population finds it difficult to get their home loa
 
 A number of recent researchers have applied machine learning to predict the loan default risk. This is important since a machine learning-based classification tool to predict the loan default risk which uses more features than just the traditional credit history can be of great help for both, potential borrowers, and the lending institutions. 
 
+---
+
 <b> Problem Statement </b>
 
 The [problem and associated data](https://www.kaggle.com/c/home-credit-default-risk/overview) has been provided by Home Call Credit Group for a Kaggle competition. The problem can be described as, <i> “A binary classification problem where the inputs are various features describing the financial and behavioral history of the loan applicants, in order to predict whether the loan will be repaid or defaulted.” </i> 
 
+---
+
 <b> Project Novelty </b>
 
-<i> The [notebook](https://github.com/abhishekdbihani/Home-Credit-Default-Risk-Recognition/blob/master/Abhishek%20Capstone%20-%20Home%20Credit%20Risk%20v2.ipynb) provides a complete end-to-end workflow for building a binary classifier, and includes methods like automated feature engineering for connecting relational databases, comparison of different classifiers on imbalanced data, and hyperparameter tuning using Bayesian optimization. </i>
+<i> The [notebook](https://github.com/abhishekdbihani/Home-Credit-Default-Risk-Recognition/blob/master/Abhishek%20Capstone%20-%20Home%20Credit%20Risk%20v2.ipynb) provides a complete end-to-end machine learning workflow for building a binary classifier, and includes methods like automated feature engineering for connecting relational databases, comparison of different classifiers on imbalanced data, and hyperparameter tuning using Bayesian optimization. </i>
+
+<img src="https://github.com/abhishekdbihani/Home-Credit-Default-Risk-Recognition/blob/master/roc_auc_compare.PNG" align="middle" width="500" height="400" alt="ROC AUC comparison" >
+Figure 1- ROC AUC Comparison of Different Classifiers
+
+---
 
 <b> Datasets and Inputs </b>
 
@@ -28,9 +37,11 @@ The [dataset files](https://www.kaggle.com/c/home-credit-default-risk/data) are 
 
 ![image](https://storage.googleapis.com/kaggle-media/competitions/home-credit/home_credit.png)
  
-Figure 1- Description and connectivity of the Home Credit Default Risk dataset
+Figure 2- Description and connectivity of the Home Credit Default Risk dataset
 
-As seen in Figure 1, the file application_{train|test}.csv contains the main table containing the training dataset (307511 samples) and test dataset (48744 samples), with each row representing one loan identified by the feature SK_ID_CURR. The training set contains the variable TARGET with binary values (0: the loan was repaid or 1: the loan was not repaid). There are many input files available, which will be analysed for input features to train the model. The large number of input features and training samples will allow me to identify the important factors and for constructing a credit default risk classification model.
+As seen in Figure 2, the file application_{train|test}.csv contains the main table containing the training dataset (307511 samples) and test dataset (48744 samples), with each row representing one loan identified by the feature SK_ID_CURR. The training set contains the variable TARGET with binary values (0: the loan was repaid or 1: the loan was not repaid). There are many input files available, which can be analysed for input features to train the model. The large number of input features and training samples make it easier to identify the important factors and for constructing a credit default risk classification model.
+
+---
 
 <b> Project Design and Solution </b>
 
@@ -45,6 +56,8 @@ The [project](https://github.com/abhishekdbihani/Home-Credit-Default-Risk-Recogn
 4. <u>Classifier Models: Training, Prediction and Comparison</u> - After the dataset is split into training and testing sets, we can correct the data imbalances by undersampling the majority class. Then, we can training the different classifier models (Logistic Regression, Random Forest, Decision Tree, Gaussian Naive Bayes, XGBoost, Gradient Boosting, LightGBM) and compare their performance on the test data using metrics like accuracy, F1-score and ROC AUC. After choosing the best classifier, we can use K-fold cross validation to select the best model. This will help us choose parameters that correspond to the best performance without creating a separate validation dataset.
 
 5. <u>Hyperparameter Tuning</u> - After choosing the binary classifier, we can tune the hyperparameters for improving the model results through grid search, random search, and Bayesian optimization [(Hypertopt library)](https://github.com/hyperopt/hyperopt). The hyperparameter tuning process will use an objective function on the given domain space, and an optimization algorithm to give the results. The ROC AUC validation scores from all three methods for different iterations can be compared to see trends.
+
+---
 
 <b> Package/Library Requirements </b>
 
@@ -71,9 +84,11 @@ The following packages need to be installed for running the [project notebook](h
 19) lightgbm - LightGBM model <br>
 20) hyperopt - Bayesian hyperparameter optimization <br>
 
+<i> Note - The packages can be installed by uncommenting the first cell in the [project notebook](https://github.com/abhishekdbihani/Home-Credit-Default-Risk-Recognition/blob/master/Abhishek%20Capstone%20-%20Home%20Credit%20Risk%20v2.ipynb) </i> 
+
 <b> References / Acknowledgements </b>
 
-This notebook builds on scripts and explanations from other Jupyter notebooks publicly shared on Kaggle. The list is as follows-
+This project builds on scripts and explanations from other Jupyter notebooks publicly shared on Kaggle. The list is as follows-
 
 1) [A Gentle Introduction](https://www.kaggle.com/willkoehrsen/start-here-a-gentle-introduction) <br>
 2) [Introduction to Automated Feature Engineering](https://www.kaggle.com/willkoehrsen/automated-feature-engineering-basics) <br>
